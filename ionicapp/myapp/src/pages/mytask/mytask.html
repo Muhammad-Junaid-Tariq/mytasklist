@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>My TaskList</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="onSubmit(form)" #form="ngForm"> 
+      <ion-item inset>
+        <ion-input no-lines type="text" [(ngModel)]="title" placeholder="Add Task" name="title"></ion-input>
+      </ion-item>
+  </form>
+  <ion-list no-lines inset>
+    <ion-grid>
+      <ion-row *ngFor="let task of items" center>
+        <ion-col width-10>
+          <ion-checkbox [checked]="task.isDone" (click)="updateStatus(task)"></ion-checkbox>
+        </ion-col>
+        <ion-col width-50>
+          <ion-label>
+              {{ task.title }}
+          </ion-label>
+        </ion-col>
+        <ion-col width-10>
+        <button ion-button color="danger" (click)="onDelete(task._id)">Delete</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-list>
+</ion-content>

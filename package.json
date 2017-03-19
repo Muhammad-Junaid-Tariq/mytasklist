@@ -1,0 +1,19 @@
+{
+  "name": "mytasklist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Junaid Tariq",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "ejs": "*",
+    "express": "*",
+    "mongoose": "^4.8.6",
+    "nodemon": "*"
+  }
+}
